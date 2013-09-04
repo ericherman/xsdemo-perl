@@ -1,0 +1,32 @@
+Build this module with:
+
+$ perl Makefile.PL
+$ make
+$ make test
+(Try "prove -vb t/*" instead of "make test" for verbose output.)
+
+Have a look at lib/XSFun.pm. If has a list of (optionally) exported
+function names.
+
+Your code goes in XSFun.xs.
+
+It doesn't hurt to have a clone of the perl source repo:
+
+  git clone http://perl5.git.perl.org/perl.git
+
+
+Relevant documentation:
+
+perlxstut.pod
+perlxs.pod
+perlapi.pod
+
+More advanced or specialized:
+perlhack.pod
+perlhacktips.pod
+perlhacktut.pod
+perlguts.pod
+perlintern.pod
+perlinterp.pod
+perlcall.pod
+perlsource.pod
