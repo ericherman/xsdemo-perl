@@ -6,7 +6,7 @@
 
 /* Your C functions if any go here */
 
-MODULE = XSFun		PACKAGE = XSFun		
+MODULE = XSTest		PACKAGE = XSTest
 
 # Your XS code goes here
 

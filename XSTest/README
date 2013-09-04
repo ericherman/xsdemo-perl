@@ -5,10 +5,10 @@ $ make
 $ make test
 (Try "prove -vb t/*" instead of "make test" for verbose output.)
 
-Have a look at lib/XSFun.pm. If has a list of (optionally) exported
+Have a look at lib/XSTest.pm. If has a list of (optionally) exported
 function names.
 
-Your code goes in XSFun.xs.
+Your code goes in XSTest.xs.
 
 It doesn't hurt to have a clone of the perl source repo:
 
