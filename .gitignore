@@ -1,0 +1,10 @@
+*.a
+*.d
+*.o
+*.swp
+*.sym
+*~
+.gdbinit
+*.so
+*.so.*
+sample-lib/test/prog
