@@ -5,6 +5,7 @@
 #include "ppport.h"
 
 /* Your C functions if any go here */
+#include <sample-lib.h>
 
 MODULE = XSTest		PACKAGE = XSTest
 
@@ -26,4 +27,7 @@ example_sum_function2(SV *a, SV *b)
     RETVAL = newSVnv(sum);
   }
   OUTPUT: RETVAL
+
+const char *
+foo_string()
 

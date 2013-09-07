@@ -11,8 +11,8 @@ WriteMakefile(
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/XSTest.pm', # retrieve abstract from module
        AUTHOR         => 'You') : ()),
-    LIBS              => [''], # e.g., '-lm'
+    LIBS              => ['-L../sample-lib -lsample-lib'], # e.g., '-lm'
     DEFINE            => '', # e.g., '-DHAVE_SOMETHING'
-    INC               => '-I.', # e.g., '-I. -I/usr/include/other'
+    INC               => '-I. -I../sample-lib', # e.g., '-I. -I/usr/include/other'
     OBJECT            => '$(O_FILES)', # link all the C files too
 );

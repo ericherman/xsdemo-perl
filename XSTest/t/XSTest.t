@@ -8,9 +8,9 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 use XSTest ':all';
 
 is(XSTest::example_sum_function(3.1, 4.2), 7.3);
 is(XSTest::example_sum_function2(3.2, 4.3), 7.5);
-
+is(XSTest::foo_string(), 'foo');
