@@ -1,6 +1,6 @@
 *.o
 *.bs
-XSTest.c
+XSDemo.c
 Makefile
 Makefile.old
 blib

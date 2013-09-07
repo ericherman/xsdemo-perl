@@ -1,4 +1,4 @@
-package XSTest;
+package XSDemo;
 
 use 5.008005;
 use strict;
@@ -12,7 +12,7 @@ our @ISA = qw(Exporter);
 # names by default without a very good reason. Use EXPORT_OK instead.
 # Do not simply export all your public functions/methods/constants.
 
-# This allows declaration	use XSTest ':all';
+# This allows declaration	use XSDemo ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
 our %EXPORT_TAGS = ( 'all' => [ qw(
@@ -25,7 +25,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our $VERSION = '0.01';
 
 require XSLoader;
-XSLoader::load('XSTest', $VERSION);
+XSLoader::load('XSDemo', $VERSION);
 
 1;
 __END__
@@ -33,16 +33,16 @@ __END__
 
 =head1 NAME
 
-XSTest - Perl extension for blah blah blah
+XSDemo - Perl extension for blah blah blah
 
 =head1 SYNOPSIS
 
-  use XSTest;
+  use XSDemo;
   blah blah blah
 
 =head1 DESCRIPTION
 
-Stub documentation for XSTest, created by h2xs. It looks like the
+Stub documentation for XSDemo, created by h2xs. It looks like the
 author of the extension was negligent enough to leave the stub
 unedited.
 

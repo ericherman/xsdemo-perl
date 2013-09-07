@@ -7,7 +7,7 @@
 /* Your C functions if any go here */
 #include <sample-lib.h>
 
-MODULE = XSTest		PACKAGE = XSTest
+MODULE = XSDemo		PACKAGE = XSDemo
 
 # Your XS code goes here
 
