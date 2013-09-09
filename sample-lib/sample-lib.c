@@ -20,6 +20,20 @@ char *create_foo_binary(size_t size)
 	return bin;
 }
 
+void reverse_foo_binary(char *bin, size_t len)
+{
+	size_t i, half;
+	char tmp;
+
+	half = len / 2;
+	for (i = 0; i < half; ++i) {
+		/* yes, this can be done with XORs */
+		tmp = bin[i];
+		bin[i] = bin[len - 1 - i];
+		bin[len - 1 - i] = tmp;
+	}
+}
+
 void destroy_foo_binary(char *bin)
 {
 	free(bin);

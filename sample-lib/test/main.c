@@ -1,23 +1,32 @@
 #include "sample-lib.h"
 #include <stdio.h>
 
-void print_binary(size_t size)
+void print_binary(const char* label, char *bin, size_t size)
 {
-	char *bin;
 	size_t i;
 
-	bin = create_foo_binary(size);
 	if (!bin) {
-		printf("could not allocate %llu bytes\n",
-		       (unsigned long long)size);
+		printf("NULL pointer\n");
 		return;
 	}
 
-	printf("binary:");
+	printf("%s:", label);
 	for (i = 0; i < size; i++) {
 		printf(" %02X", *(bin + i));
 	}
 	printf("\n");
+}
+
+void foo_binary(size_t size)
+{
+	char *bin;
+
+	bin = create_foo_binary(size);
+	print_binary("hexbytes", bin, size);
+
+	reverse_foo_binary(bin, size);
+	print_binary("reversed", bin, size);
+
 	destroy_foo_binary(bin);
 }
 
@@ -26,7 +35,7 @@ int main(void)
 
 	printf("%s\n", foo_string());
 
-	print_binary(20);
+	foo_binary(20);
 
 	printf("four stars: %zu\n", num_stars((unsigned char *)"f*o*u*r*", 9));
 	printf("no stars: %zu\n", num_stars((unsigned char *)"no stars", 9));

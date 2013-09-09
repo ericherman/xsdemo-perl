@@ -43,6 +43,9 @@ create_foo_binary(size_t size)
   OUTPUT: RETVAL
 
 void
+reverse_foo_binary(char *bin, size_t len)
+
+void
 destroy_foo_binary(char *bin)
 
 

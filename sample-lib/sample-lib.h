@@ -7,6 +7,7 @@
 const char *foo_string();
 
 char *create_foo_binary(size_t size);
+void reverse_foo_binary(char *bin, size_t len);
 void destroy_foo_binary(char *bin);
 
 size_t num_stars(const unsigned char *bin, const size_t binlen);

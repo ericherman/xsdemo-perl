@@ -8,17 +8,23 @@
 use strict;
 use warnings;
 
-use Test::More tests => 6;
+use Test::More tests => 7;
 use XSDemo ':all';
 
 is( XSDemo::example_sum_function( 3.1, 4.2 ), 7.3 );
 is( XSDemo::example_sum_function2( 3.2, 4.3 ), 7.5 );
 
 is( XSDemo::foo_string(), 'foo' );
+
 my $expected = "000102030405060708090a0b0c0d0e0f10111213";
 my $bin      = XSDemo::create_foo_binary(20);
 my ($hex) = unpack( 'H*', $bin );
 is( $hex, $expected );
+
+my $packed = pack( "a*", "\000\001\002\003" );
+XSDemo::reverse_foo_binary( $packed, 4 );
+($hex) = unpack( 'H*', $packed );
+is( $hex, "03020100" );
 
 is( XSDemo::num_stars( 't*w*o', 5 ), 2 );
 is( XSDemo::num_stars( 'none',  4 ), 0 );
