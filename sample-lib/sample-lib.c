@@ -1,10 +1,28 @@
 #include "sample-lib.h"
+#include <stdlib.h>
 
 const char *_foo_string = "foo";
 
 const char *foo_string()
 {
 	return _foo_string;
+}
+
+char *create_foo_binary(size_t size)
+{
+	char *bin;
+	size_t i;
+
+	bin = (void *)malloc(size);
+	for (i = 0; i < size; ++i) {
+		*(bin + i) = (char)i;
+	}
+	return bin;
+}
+
+void destroy_foo_binary(char *bin)
+{
+	free(bin);
 }
 
 size_t num_stars(const unsigned char *bin, const size_t binlen)

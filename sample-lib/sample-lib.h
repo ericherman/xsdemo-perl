@@ -6,6 +6,9 @@
 
 const char *foo_string();
 
+char *create_foo_binary(size_t size);
+void destroy_foo_binary(char *bin);
+
 size_t num_stars(const unsigned char *bin, const size_t binlen);
 
 #endif /* _SAMPLE_LIB_H_ */

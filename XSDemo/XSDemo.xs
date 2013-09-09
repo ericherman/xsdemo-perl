@@ -31,5 +31,20 @@ example_sum_function2(SV *a, SV *b)
 const char *
 foo_string()
 
+SV *
+create_foo_binary(size_t size)
+  PREINIT:
+    /* c89 style declarations */
+    char *str;
+  CODE:
+    str = create_foo_binary(size);
+    RETVAL = newSVpvn(str, size); /* see perldoc perlapi */
+    sv_2mortal(RETVAL); /* stack doesn't own a reference */
+  OUTPUT: RETVAL
+
+void
+destroy_foo_binary(char *bin)
+
+
 size_t
 num_stars(const unsigned char *bin, const size_t binlen)
