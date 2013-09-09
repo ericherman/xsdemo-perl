@@ -1,0 +1,3 @@
+TYPEMAP
+const size_t            T_UV
+const unsigned char *   T_PV

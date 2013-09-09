@@ -8,9 +8,11 @@
 use strict;
 use warnings;
 
-use Test::More tests => 3;
+use Test::More tests => 5;
 use XSDemo ':all';
 
-is(XSDemo::example_sum_function(3.1, 4.2), 7.3);
-is(XSDemo::example_sum_function2(3.2, 4.3), 7.5);
-is(XSDemo::foo_string(), 'foo');
+is( XSDemo::example_sum_function( 3.1, 4.2 ), 7.3 );
+is( XSDemo::example_sum_function2( 3.2, 4.3 ), 7.5 );
+is( XSDemo::foo_string(), 'foo' );
+is( XSDemo::num_stars( 't*w*o', 5 ), 2 );
+is( XSDemo::num_stars( 'none',  4 ), 0 );

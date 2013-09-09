@@ -31,3 +31,5 @@ example_sum_function2(SV *a, SV *b)
 const char *
 foo_string()
 
+size_t
+num_stars(const unsigned char *bin, const size_t binlen)
