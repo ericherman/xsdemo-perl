@@ -48,6 +48,9 @@ reverse_foo_binary(char *bin, size_t len)
 void
 destroy_foo_binary(char *bin)
 
+void
+dump_hex(const char *label, const char *s, size_t length(s))
+
 
 size_t
 num_stars(const unsigned char *bin, const size_t binlen)

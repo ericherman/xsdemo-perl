@@ -21,10 +21,14 @@ my $bin      = XSDemo::create_foo_binary(20);
 my ($hex) = unpack( 'H*', $bin );
 is( $hex, $expected );
 
+# XSDemo::destroy_foo_binary($bin);
+
 my $packed = pack( "a*", "\000\001\002\003" );
 XSDemo::reverse_foo_binary( $packed, 4 );
 ($hex) = unpack( 'H*', $packed );
 is( $hex, "03020100" );
+
+XSDemo::dump_hex( "noise", $hex );
 
 is( XSDemo::num_stars( 't*w*o', 5 ), 2 );
 is( XSDemo::num_stars( 'none',  4 ), 0 );
