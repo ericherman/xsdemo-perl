@@ -1,5 +1,7 @@
 #include "sample-lib.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 const char *_foo_string = "foo";
 
@@ -51,4 +53,27 @@ size_t num_stars(const unsigned char *bin, const size_t binlen)
 		}
 	}
 	return count;
+}
+
+void dump_hex(const char *label, const char *bin, size_t size)
+{
+	size_t i, j, labelspace;
+
+	if (!bin) {
+		printf("NULL pointer\n");
+		return;
+	}
+
+	labelspace = 1 + strlen(label);
+	printf("%s:", label);
+	for (i = 0; i < size; i++) {
+		if ((i > 0) && (i % 16 == 0)) {
+			printf("\n");
+			for (j = 0; j < labelspace; ++j) {
+				printf(" ");
+			}
+		}
+		printf(" %02X", *(bin + i));
+	}
+	printf("\n");
 }
